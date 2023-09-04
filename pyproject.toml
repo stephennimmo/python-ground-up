@@ -7,8 +7,26 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+alembic = "^1.12.0"
+sqlalchemy-utils = "^0.41.1"
+pydantic-settings = "^2.0.3"
+psycopg2-binary = "^2.9.7"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.1"
+poethepoet = "^0.22.1"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poe]
+envfile = ".env"
+
+[tool.poe.tasks]
+run = "uvicorn src.main:app --reload"
+test = "pytest -v"
+migrate = "alembic upgrade head"
+compose-up = "podman-compose -f compose.yaml up -d"
+compose-down = "podman-compose -f compose.yaml down"
