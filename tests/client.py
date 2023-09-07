@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
 
-from src.main import app
+from python_ground_up.main import app
 
 test_client = TestClient(app)

@@ -14,12 +14,12 @@ psycopg2-binary = "^2.9.7"
 fastapi = "^0.103.1"
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
 pydantic = {extras = ["email"], version = "^2.3.0"}
-httpx = "^0.24.1"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.1"
 poethepoet = "^0.22.1"
+httpx = "^0.24.1"
 
 [build-system]
 requires = ["poetry-core"]
@@ -29,7 +29,7 @@ build-backend = "poetry.core.masonry.api"
 envfile = ".env"
 
 [tool.poe.tasks]
-run = "uvicorn src.main:app --reload"
+run = "uvicorn python_ground_up.main:app --reload"
 test = "pytest -v"
 migrate = "alembic upgrade head"
 compose-up = "podman-compose -f compose.yaml up -d"

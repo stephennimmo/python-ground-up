@@ -3,9 +3,9 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 
-from src.database import get_session
-from src.customer.schemas import Customer
-from src.customer.service import CustomerService
+from python_ground_up.database import get_session
+from python_ground_up.customer.schemas import Customer
+from python_ground_up.customer.service import CustomerService
 
 router = APIRouter(tags=["customer"])
 customer_service = CustomerService()

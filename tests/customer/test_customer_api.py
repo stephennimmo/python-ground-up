@@ -3,7 +3,7 @@ import string
 
 from fastapi import status
 
-from src.customer.schemas import Customer
+from python_ground_up.customer.schemas import Customer
 from tests.client import test_client
 
 

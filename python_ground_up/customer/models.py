@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, Text
 from sqlalchemy_utils import EmailType
 
-from src.database import Base
+from python_ground_up.database import Base
 
 
 class CustomerBase(Base):

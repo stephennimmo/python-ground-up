@@ -1,7 +1,7 @@
 from typing import Type
 from sqlalchemy.orm import Session
 
-from src.customer.models import CustomerBase
+from python_ground_up.customer.models import CustomerBase
 
 
 class CustomerRepository:
