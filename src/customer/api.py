@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 
 from src.database import get_session
-from src.customer.schema import Customer
+from src.customer.schemas import Customer
 from src.customer.service import CustomerService
 
 router = APIRouter(tags=["customer"])

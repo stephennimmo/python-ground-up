@@ -12,8 +12,8 @@ class Base(DeclarativeBase):
 
 
 def get_session():
-    db = SessionLocal()
+    session = SessionLocal()
     try:
-        yield db
+        yield session
     finally:
-        db.close()
+        session.close()
