@@ -20,6 +20,7 @@ pydantic = {extras = ["email"], version = "^2.3.0"}
 pytest = "^7.4.1"
 poethepoet = "^0.22.1"
 httpx = "^0.24.1"
+ruff = "^0.0.287"
 
 [build-system]
 requires = ["poetry-core"]
