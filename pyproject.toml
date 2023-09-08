@@ -15,7 +15,6 @@ fastapi = "^0.103.1"
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
 pydantic = {extras = ["email"], version = "^2.3.0"}
 
-
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.1"
 poethepoet = "^0.22.1"
@@ -32,6 +31,7 @@ envfile = ".env"
 [tool.poe.tasks]
 run = "uvicorn python_ground_up.main:app --reload"
 test = "pytest -v"
+lint = "ruff ."
 migrate = "alembic upgrade head"
 compose-up = "podman-compose -f compose.yaml up -d"
 compose-down = "podman-compose -f compose.yaml down"
